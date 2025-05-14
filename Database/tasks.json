@@ -1,0 +1,81 @@
+[
+    {
+        "id": "aea5cc0c-ae56-4348-bc1d-ea4131df7017",
+        "title": "demo",
+        "description": "white board\r\n",
+        "assigned_to": "123",
+        "status": "Completed"
+    },
+    {
+        "id": "cb10c6ee-6062-4aaf-a0a8-dbe472b4a7ed",
+        "title": "Demox",
+        "description": "Democ",
+        "assigned_to": "123",
+        "deadline": "2025-05-13",
+        "status": "Completed"
+    },
+    {
+        "id": "4473229b-0448-434f-8cab-5010df0b76d9",
+        "title": "Object Detection",
+        "description": "Obstraction handling(ex. hand, marker)",
+        "assigned_to": "123",
+        "deadline": "2025-05-29",
+        "status": "Completed"
+    },
+    {
+        "id": "2a0e77a1-914a-4c71-9e65-553404139f32",
+        "title": "Enable Camera",
+        "description": "Enable the IMX477 camera",
+        "assigned_to": "101",
+        "deadline": "2025-05-13",
+        "status": "Pending"
+    },
+    {
+        "id": "8303db9c-f5fd-4b58-8052-207df4dedef9",
+        "title": "Capture Real Time Image",
+        "description": "Capture Real time image using OpenCV",
+        "assigned_to": "105",
+        "deadline": "2025-05-12",
+        "status": "Completed"
+    },
+    {
+        "id": "b5c05b87-acb5-49c8-91f9-4eb0a7dab9b8",
+        "title": "Database",
+        "description": "Create a database of a user",
+        "assigned_to": "101",
+        "deadline": "2025-05-14",
+        "status": "Pending"
+    },
+    {
+        "id": "ad7a180e-926f-4597-bb50-5dcd2e34ddee",
+        "title": "UI Design",
+        "description": "Improve in UI Design Part",
+        "assigned_to": "106",
+        "deadline": "2025-05-23",
+        "status": "Completed"
+    },
+    {
+        "id": "e0205fad-d655-4f7f-a5dc-08112cdd11a2",
+        "title": "Image Processing",
+        "description": "Processed the raw image",
+        "assigned_to": "105",
+        "deadline": "2025-05-22",
+        "status": "Pending"
+    },
+    {
+        "id": "5b46dbb6-dbab-435b-93d6-08997a08690d",
+        "title": "demo",
+        "description": "demo\r\n",
+        "assigned_to": "101",
+        "deadline": "2025-05-23",
+        "status": "Pending"
+    },
+    {
+        "id": "221ea435-8e3a-4e40-bf2c-fed2b5551701",
+        "title": "Demo",
+        "description": "Demo",
+        "assigned_to": "106",
+        "deadline": "2025-05-17",
+        "status": "Completed"
+    }
+]

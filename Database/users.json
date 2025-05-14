@@ -1,0 +1,56 @@
+[
+    {
+        "id": "123",
+        "name": "Pratiksha Bangar",
+        "password": "1234",
+        "role": "Employee"
+    },
+    {
+        "id": "1000",
+        "name": "Demo Manager",
+        "password": "1234",
+        "role": "Manager"
+    },
+    {
+        "id": "111",
+        "name": "Pratiksha",
+        "password": "1234",
+        "role": "Employee"
+    },
+    {
+        "id": "101",
+        "name": "Mayur Shinde",
+        "password": "1234",
+        "role": "Employee"
+    },
+    {
+        "id": "103",
+        "name": "Amey Kulkarni",
+        "password": "1234",
+        "role": "Team Lead"
+    },
+    {
+        "id": "104",
+        "name": "Shankaran Venugopalan",
+        "password": "1234",
+        "role": "Manager"
+    },
+    {
+        "id": "105",
+        "name": "Pooja Chavan",
+        "password": "1234",
+        "role": "Employee"
+    },
+    {
+        "id": "106",
+        "name": "Ankita Sheke",
+        "password": "1234",
+        "role": "Employee"
+    },
+    {
+        "id": "107",
+        "name": "sandeep T",
+        "password": "1234",
+        "role": "Manager"
+    }
+]
