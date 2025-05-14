@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body {
+        background-image: url('/images/b1.gif'); /* Make sure image exists */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 100vh;
+    }
+
+    .btn-register:hover {
+        background-color: #28a745;
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .form-container {
+        background-color: rgba(255, 255, 255, 0.95); /* Optional white overlay */
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <!-- Registration Form -->
+        <div class="col-md-6">
+            <div class="form-container">
+                <form method="post" class="p-4">
+                    <input type="text" name="id" class="form-control mb-3" placeholder="User ID" required>
+                    <input type="text" name="name" class="form-control mb-3" placeholder="Full Name" required>
+                    <input type="email" name="email" class="form-control mb-3" placeholder="Email Address" required>
+                    <input type="tel" name="phone" class="form-control mb-3" placeholder="Phone Number" required>
+                    <input type="password" name="password" class="form-control mb-3" placeholder="Password" required>
+                    <select name="role" class="form-control mb-4" required>
+                        <option value="">Select Role</option>
+                        <option value="Manager">Manager</option>
+                        <option value="Team Lead">Team Lead</option>
+                        <option value="Employee">Employee</option>
+                    </select>
+                    <button class="btn btn-success w-100 btn-register">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

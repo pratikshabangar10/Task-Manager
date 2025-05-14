@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+    <div style="width: 500px;"> <!-- Increased width -->
+        <h3 class="text-center mb-4">Assign Task</h3>
+        <form method="post">
+            <input type="text" name="title" class="form-control mb-4" placeholder="Task Title" required style="width: 100%; max-width: 100%; border-radius: 8px;"> <!-- Lightly rounded corners -->
+            
+            <textarea name="description" class="form-control mb-4" placeholder="Task Description" required style="width: 100%; max-width: 100%; border-radius: 8px;"></textarea> <!-- Lightly rounded corners -->
+            
+            <select name="assigned_to" class="form-control mb-4" required style="width: 100%; max-width: 100%; border-radius: 8px;"> <!-- Lightly rounded corners -->
+                <option value="">Select Employee</option>
+                {% for emp in employees %}
+                    <option value="{{ emp.id }}">{{ emp.name }} ({{ emp.id }})</option>
+                {% endfor %}
+            </select>
+            
+            <label for="deadline">Deadline:</label>
+            <input type="date" name="deadline" class="form-control mb-4" required style="width: 100%; max-width: 100%; border-radius: 8px;"> <!-- Lightly rounded corners -->
+            
+            <button class="btn btn-success btn-sm w-100" style="transition: all 0.3s ease; border-radius: 8px;">Assign Task</button> <!-- Lightly rounded corners -->
+        </form>
+    </div>
+</div>
+
+<style>
+    .btn-success:hover {
+        background-color: #28a745;
+        color: white;
+        transform: scale(1.1); /* Slightly increase the size on hover */
+    }
+</style>
+
+{% endblock %}

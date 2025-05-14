@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager </title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Optional: Add custom styles -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Background image with blur effect */
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: url("/images/login_bg.jpg") no-repeat center center;
+            background-size: cover;
+            filter: blur(5px);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 960px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);  /* Slightly transparent */
+            border-radius: 5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;  /* Width of the form */
+            width: 200%;
+            padding: 30px;  /* Adjust padding inside the card */
+        }
+
+        
+
+        .card-body {
+            padding: 40px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            font-size: 16px; /* Increase font size of input fields */
+            padding: 12px; /* Increase padding inside input fields */
+            padding-left: 2.5rem;
+        }
+
+        .btn {
+            font-size: 16px;  /* Increase button font size */
+            padding: 12px;  /* Increase button padding */
+            hover:{background-color: #0056b3 }
+        }
+
+        .container {
+            margin-top: 5%;  /* Center the form vertically */
+        }
+
+        /* Optional: Add responsiveness for small screens */
+        @media (max-width: 576px) {
+            .card {
+                width: 90%;  /* Make the form full width on smaller screens */
+            }
+        }
+
+        /* Navbar styling */
+        .navbar {
+            box-shadow: 0 4px 6px hsla(249, 57.70%, 20.40%, 0.10);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: white;
+        }
+
+        .user-info {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .user-info a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .user-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Image with Blur -->
+    <div class="bg-image"></div>
+
+    <!-- Navbar with improved design -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+        <a class="navbar-brand" href="/dashboard">TaskManager <img src="/images/samsan.jpg" alt="Samsan Logo" style="height: 30px; margin-left: 10px;"></a>
+        <div class="ms-auto">
+            {% if session.user %}
+                <div class="d-flex align-items-center">
+                    <span class="text-white me-3 user-info">
+                        {{ session.user.name }} ({{ session.user.role }})
+                    </span>
+                    <a href="/logout" class="btn btn-outline-light btn-sm">Logout</a>
+                </div>
+            {% endif %}
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Optional: Bootstrap JS (with Popper.js for interactive elements) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
